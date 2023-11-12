@@ -1,0 +1,17 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  unimplemented:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up repository
+      uses: actions/checkout@v2
+
+    - name: Show Unimplemented Message
+      run: echo "This workflow needs to be implemented. It should run linter and tests"
+
+    - name: Fail the Workflow
+      run: exit 1

@@ -13,3 +13,12 @@ This is a package management tool for javascript projects
 
 - Version: 1.22.19
 - Setup: https://classic.yarnpkg.com/lang/en/docs/install/
+
+## E2E testing
+Follow this guide (https://tauri.app/v1/guides/testing/webdriver/introduction) to setup tools to run E2E tests
+
+## Continuous Integration
+This project has a failing CI script for Github Actions in `.github/workflows/ci.yml`. Contact the project owner (https://github.com/amg98) to implement the workflow so a PR can be submitted.
+
+For local development, you can ensure tests passing automatically using a git hook in whatever stage you like. An example script could be:
+`yarn tsc && yarn lint && yarn test && yarn test:e2e`

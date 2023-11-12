@@ -12,9 +12,11 @@ function App() {
     setGreetMsg(await invoke("greet", { name }));
   }
 
+  console.log(import.meta.env.VITE_E2E, typeof(import.meta.env.VITE_E2E))
+
   return (
     <div className="container">
-      <h1>Welcome to Tauri!</h1>
+      <h1>Woohoo!!!</h1>
 
       <div className="row">
         <a href="https://vitejs.dev" target="_blank">
