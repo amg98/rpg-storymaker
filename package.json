@@ -9,7 +9,7 @@
     "build": "tsc && vite build --mode production",
     "test": "vitest --passWithNoTests && cd src-tauri && cargo test",
     "test:e2e": "cd src-tauri && cargo build && cd .. && npm run start:e2e & echo 'Dev server started' && wdio run wdio.conf.cjs && node ./scripts/kill-devserver.js",
-    "ci": "yarn test && yarn test:e2e",
+    "ci": "yarn tsc && yarn lint && yarn test && yarn test:e2e",
     "tsc": "tsc",
     "lint": "tsc",
     "tauri:start": "tauri dev",
