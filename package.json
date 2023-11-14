@@ -11,24 +11,32 @@
     "test:e2e": "cd src-tauri && cargo build && cd .. && npm run start:e2e & echo 'Dev server started' && wdio run wdio.conf.cjs && node ./scripts/kill-devserver.js",
     "ci": "yarn tsc && yarn lint && yarn test && yarn test:e2e",
     "tsc": "tsc",
-    "lint": "tsc",
+    "lint": "eslint ./source",
     "tauri:start": "tauri dev",
     "tauri:build": "tauri build"
   },
   "dependencies": {
     "@tauri-apps/api": "1.5.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "rxjs": "7.8.1"
   },
   "devDependencies": {
     "@tauri-apps/cli": "1.5.6",
     "@types/react": "18.2.25",
     "@types/react-dom": "18.2.0",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
     "@vitejs/plugin-react": "4.0.3",
     "@wdio/cli": "7.9.1",
     "@wdio/local-runner": "7.9.1",
     "@wdio/mocha-framework": "7.9.1",
     "@wdio/spec-reporter": "7.9.0",
+    "eslint": "8.53.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-react": "7.33.2",
+    "prettier": "3.1.0",
     "typescript": "5.0.2",
     "vite": "4.4.4",
     "vitest": "0.34.6"

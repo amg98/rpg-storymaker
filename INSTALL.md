@@ -20,4 +20,4 @@ Follow this guide (https://tauri.app/v1/guides/testing/webdriver/introduction) t
 ## Continuous Integration
 This project has a failing CI script for Github Actions in `.github/workflows/ci.yml`. Contact the project owner (https://github.com/amg98) to implement the workflow so a PR can be submitted.
 
-For local development, you can ensure tests passing automatically using a git hook in whatever stage you like. Just run `yarn ci`
+For local development, you can ensure tests are passing by running `yarn ci`
