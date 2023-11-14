@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "vite --mode dev",
+    "start:e2e": "vite --mode e2e",
     "build": "tsc && vite build --mode production",
     "test": "vitest --passWithNoTests && cd src-tauri && cargo test",
-    "test:e2e": "cd src-tauri && cargo build && cd .. && yarn vite --mode e2e & echo 'Dev server started' && wdio run wdio.conf.cjs && node ./scripts/kill-devserver.js",
+    "test:e2e": "cd src-tauri && cargo build && cd .. && npm run start:e2e & echo 'Dev server started' && wdio run wdio.conf.cjs && node ./scripts/kill-devserver.js",
     "ci": "yarn test && yarn test:e2e",
     "tsc": "tsc",
     "lint": "tsc",
