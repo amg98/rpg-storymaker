@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg"
 import { invoke } from "@tauri-apps/api/tauri"
 import "./App.css"
 import { initI18N } from "./core/i18n"
+import CssBaseline from "@mui/material/CssBaseline"
 
 function App() {
     const [greetMsg, setGreetMsg] = useState("")
@@ -21,6 +22,7 @@ function App() {
 
     return (
         <div className="container">
+            <CssBaseline />
             <h1>Woohoo!!!</h1>
 
             <div className="row">
