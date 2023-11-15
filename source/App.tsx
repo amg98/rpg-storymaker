@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import reactLogo from "./assets/react.svg"
 import { invoke } from "@tauri-apps/api/tauri"
 import "./App.css"
+import { initI18N } from "./core/i18n"
 
 function App() {
     const [greetMsg, setGreetMsg] = useState("")
@@ -11,6 +12,10 @@ function App() {
         // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
         setGreetMsg(await invoke("greet", { name }))
     }
+
+    useEffect(() => {
+        initI18N()
+    }, [])
 
     console.log(import.meta.env.VITE_E2E, typeof import.meta.env.VITE_E2E)
 
